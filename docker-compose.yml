@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mariadb:
+    container_name: aio_mariadb
+    image: bitnami/mariadb:11.2.3-debian-12-r4
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "13306:3306"
+    volumes:
+      - mariadb_data:/bitnami/maria
+    restart: always
+    networks:
+      - aio_network
+
+  phpmyadmin:
+    image: bitnami/phpmyadmin:5.2.1-debian-12-r20
+    container_name: aio_pma
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mariadb
+    restart: always
+    networks:
+      - aio_network
+
+  tomcat:
+    container_name: aio_tomcat
+    image: tomcat:latest
+    ports:
+      - "9080:8080"
+    volumes:
+      - ./target:/usr/local/tomcat/webapps
+    restart: always
+    networks:
+      - aio_network
+
+volumes:
+  mariadb_data:
+    driver: local
+
+networks:
+  aio_network:
+    driver: bridge
