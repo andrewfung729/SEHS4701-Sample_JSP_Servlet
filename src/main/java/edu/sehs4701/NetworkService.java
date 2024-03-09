@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class NetworkService
  */
-@WebServlet("/")
+@WebServlet(name = "NetworkService", value = "/NetworkService")
 public class NetworkService extends HttpServlet {
     private static final long serialVersionUID = 1L;
     public String clientIPAddress;
