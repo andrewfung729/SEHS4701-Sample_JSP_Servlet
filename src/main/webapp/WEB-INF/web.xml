@@ -4,16 +4,6 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-    <servlet>
-        <display-name>SimpleServlet</display-name>
-        <servlet-name>SimpleServlet</servlet-name>
-        <servlet-class>edu.sehs4701.SimpleServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SimpleServlet</servlet-name>
-        <url-pattern>/ss</url-pattern>
-    </servlet-mapping>
-
     <context-param>
         <param-name>dbName</param-name>
         <param-value>jdbc:mysql://localhost:3306/shop</param-value>
