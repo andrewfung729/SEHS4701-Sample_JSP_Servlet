@@ -15,17 +15,8 @@
 <p>
     Server data and time: <%=new Date()%>
 </p>
-<p>Your client IP address is = ${ipAddress}</p>
-
-<% int i = 0; %>
-<p>Using %: <%= ++i %></p>
-
-<%! int j = 0; %>
-<p>Using %!: <%= ++j %></p>
-
-<%! static int k = 0; %>
-<p>Using %! static: <%= ++k %></p>
-
-
+<p>
+    Your client IP address is = ${ipAddress}
+</p>
 </body>
 </html>

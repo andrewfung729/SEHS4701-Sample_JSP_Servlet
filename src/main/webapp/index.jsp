@@ -15,7 +15,8 @@ Your computer local address: <br/>
     </p>
 </div>
 (Using Servlet)
-<div id="IPAddressFromServlet"><a href="/Sample_JSP_Servlet/GetIPFromServlet"> Get IP From Servlet</a>
+<div id="IPAddressFromServlet">
+    <a href="${pageContext.request.contextPath}/NetworkService">Get IP From Servlet</a>
 </div>
 </body>
 </html>
