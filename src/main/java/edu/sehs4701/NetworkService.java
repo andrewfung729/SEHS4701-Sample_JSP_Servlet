@@ -43,7 +43,7 @@ public class NetworkService extends HttpServlet {
             clientIPAddress = request.getRemoteAddr();
         }
         request.setAttribute("ipAddress", clientIPAddress);
-        request.getRequestDispatcher("GetIPFromServlet.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/GetIPFromServlet.jsp").forward(request, response);
     }
 
     /**
